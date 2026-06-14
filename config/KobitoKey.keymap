@@ -6,13 +6,11 @@
 / {
     combos {
         compatible = "zmk,combos";
-        // 元のコンボ設定を維持
         LClick { bindings = <&mkp LCLK>; key-positions = <17 18>; };
         RClick { bindings = <&mkp RCLK>; key-positions = <7 8>; };
     };
 
     behaviors {
-        // 画像内のホールドタップ（*Ctrlや*Shiftなど）の挙動を定義
         hm_shft: hm_shft { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&kp>, <&kp>; };
         hm_ctrl: hm_ctrl { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&kp>, <&kp>; };
         hm_alt: hm_alt { compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; flavor = "balanced"; tapping-term-ms = <200>; bindings = <&kp>, <&kp>; };
@@ -22,27 +20,27 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // LAYER 0: デフォルトレイヤー (画像1枚目)
+        // LAYER 0: デフォルトレイヤー
         default_layer {
             bindings = <
 &kp Q             &kp W             &kp E             &kp R             &kp T         &kp Y          &kp U             &kp I             &kp O             &kp P
 &hm_shft LSHFT A  &hm_ctrl LCTRL S  &kp D             &kp F             &kp G         &kp H          &lt 3 J           &kp K             &kp L             &hm_ctrl RCTRL ENTER
-&lt 5 Z           &kp X             &kp C             &kp V             &kp B         &lt 3 GRAVE    &hm_shft LSHFT BS &kp COMMA         &kp DOT           &kp EQUAL
+&lt 5 Z           &kp X             &kp C             &kp V             &kp B         &lt 3 GRAVE    &hm_shft LSHFT BSPC &kp COMMA        &kp DOT           &kp EQUAL
 &kp F7            &kp F10           &trans            &lt 1 SPACE       &lt 2 TAB     &trans         &trans            &trans            &trans            &kp LGUI
             >;
         };
 
-        // LAYER 1: 記号レイヤー (画像2枚目)
+        // LAYER 1: 記号レイヤー
         layer1 {
             bindings = <
-&kp N5            &kp N4            &kp N6            &kp INT_YEN       &kp SLASH     &kp MINUS      &kp LBKT          &kp RBKT          &kp COMMA         &kp DOT
-&kp INT_YEN       &kp N3            &kp SEMI          &kp SEMI          &kp MINUS     &kp SQT        &kp N8            &kp N9            &kp PLUS          &kp STAR
+&kp N5            &kp N4            &kp N6            &kp BSLH          &kp SLASH     &kp MINUS      &kp LBKT          &kp RBKT          &kp COMMA         &kp DOT
+&kp BSLH          &kp N3            &kp SEMI          &kp SEMI          &kp MINUS     &kp SQT        &kp N8            &kp N9            &kp PLUS          &kp STAR
 &kp EQUAL         &kp EQUAL         &trans            &kp N1            &kp SLASH     &kp SQT        &kp LBKT          &kp RBKT          &kp SQT           &kp EQUAL
 &kp LSHFT         &kp LALT          &trans            &trans            &trans        &trans         &trans            &trans            &trans            &kp LGUI
             >;
         };
 
-        // LAYER 2: テンキー・割当レイヤー (画像3枚目)
+        // LAYER 2: テンキー・割当レイヤー
         layer2 {
             bindings = <
 &trans            &trans            &kp SLASH         &kp MINUS         &kp SLASH     &kp SLASH      &kp N7            &kp N8            &kp N9            &kp COMMA
@@ -52,7 +50,7 @@
             >;
         };
 
-        // LAYER 3: ナビゲーション・編集レイヤー (画像4枚目)
+        // LAYER 3: ナビゲーション・編集レイヤー
         layer3 {
             bindings = <
 &hm_ctrl LCTRL W  &hm_gui LGUI LEFT &hm_gui LGUI UP   &hm_gui LGUI RIGHT &trans       &kp PG_UP      &kp HOME          &kp UP            &kp END           &kp PG_DN
@@ -62,7 +60,7 @@
             >;
         };
 
-        // LAYER 4: 未使用（空レイヤーとして維持）
+        // LAYER 4: 未使用
         layer_4 {
             bindings = <
 &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
@@ -72,7 +70,7 @@
             >;
         };
 
-        // LAYER 5: 右手側テンキー・便利レイヤー (画像5枚目)
+        // LAYER 5: 右手側テンキー
         layer5 {
             bindings = <
 &trans            &trans            &trans            &trans            &trans        &trans         &hm_gui LGUI N7   &hm_gui LGUI N8   &hm_gui LGUI N9   &kp RGUI

@@ -57,49 +57,49 @@
         _DOUBLE_QUOTE_: _DOUBLE_QUOTE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N2>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LSHFT &kp N2 &macro_release &kp LSHFT>;
         };
 
         _AND_: _AND_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N6>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LSHFT &kp N6 &macro_release &kp LSHFT>;
         };
 
         _SINGLE_QUOTE_: _SINGLE_QUOTE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N7>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LSHFT &kp N7 &macro_release &kp LSHFT>;
         };
 
         _L_PAREN_: _L_PAREN_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N8>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LSHFT &kp N8 &macro_release &kp LSHFT>;
         };
 
         _R_PAREN_: _R_PAREN_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp N9>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LSHFT &kp N9 &macro_release &kp LSHFT>;
         };
 
         _EQUAL_: _EQUAL_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp MINUS>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LSHFT &kp MINUS &macro_release &kp LSHFT>;
         };
 
         _TILDE_: _TILDE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp EQUAL>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LSHFT &kp EQUAL &macro_release &kp LSHFT>;
         };
 
         _PIPE_: _PIPE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp BACKSLASH>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LSHFT &kp BACKSLASH &macro_release &kp LSHFT>;
         };
 
         _SEMICOLON_: _SEMICOLON_ {
@@ -111,19 +111,19 @@
         _PLUS_: _PLUS_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp SEMI>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LSHFT &kp SEMI &macro_release &kp LSHFT>;
         };
 
         _ASTERISK_: _ASTERISK_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp LBKT>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LSHFT &kp LBKT &macro_release &kp LSHFT>;
         };
 
         _UNDER_LINE_: _UNDER_LINE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp BACKSLASH>, <&macro_release &kp LSHFT>;
+            bindings = <&macro_press &kp LSHFT &kp BACKSLASH &macro_release &kp LSHFT>;
         };
     };
 

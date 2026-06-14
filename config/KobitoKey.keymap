@@ -5,108 +5,128 @@
 #include <dt-bindings/zmk/pointing.h>
 
 /* --- JIS（日本語配列）記号用マクロ定義 --- */
-    macros {
-        _ZENKAKU_: _ZENKAKU_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE>; // 半角/全角
-        };
-        _YEN_: _YEN_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp INT3>; // ￥
-        };
-        _RO_: _RO_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp INT1>; // ろ ( \ )
-        };
-        _AT_: _AT_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT>; // ＠
-        };
-        _HAT_: _HAT_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>; // ＾
-        };
-        _COLON_: _COLON_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT>; // ：
-        };
-        _L_BRACKET_: _L_BRACKET_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RBKT>; // ［ (開き大カッコ)
-        };
-        _R_BRACKET_: _R_BRACKET_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp NONUS_HASH>; // ］ (閉じ大カッコ)
-        };
-        _DOUBLE_QUOTE_: _DOUBLE_QUOTE_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N2)>; // ”
-        };
-        _AND_: _AND_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N6)>; // ＆
-        };
-        _SINGLE_QUOTE_: _SINGLE_QUOTE_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N7)>; // ’
-        };
-        _L_PAREN_: _L_PAREN_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N8)>; // （ (開きカッコ)
-        };
-        _R_PAREN_: _R_PAREN_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(N9)>; // ） (閉じカッコ)
-        };
-        _EQUAL_: _EQUAL_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(MINUS)>; // ＝
-        };
-        _TILDE_: _TILDE_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(EQUAL)>; // ～
-        };
-        _PIPE_: _PIPE_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(INT3)>; // ｜
-        };
-        _SEMICOLON_: _SEMICOLON_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SEMI>; // ；
-        };
-        _PLUS_: _PLUS_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(SEMI)>; // ＋
-        };
-        _ASTERISK_: _ASTERISK_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LBKT)>; // ＊
-        };
-        _UNDER_LINE_: _UNDER_LINE_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(INT1)>; // ＿
-        };
+
+macros {
+    _ZENKAKU_: _ZENKAKU_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp GRAVE>; // 半角/全角
     };
+
+    _YEN_: _YEN_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp INT3>; // ￥
+    };
+
+    _RO_: _RO_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp INT1>; // ろ ( \ )
+    };
+
+    _AT_: _AT_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LBKT>; // ＠
+    };
+
+    _HAT_: _HAT_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp EQUAL>; // ＾
+    };
+
+    _COLON_: _COLON_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp SQT>; // ：
+    };
+
+    _L_BRACKET_: _L_BRACKET_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp RBKT>; // ［ (開き大カッコ)
+    };
+
+    _R_BRACKET_: _R_BRACKET_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp NONUS_HASH>; // ］ (閉じ大カッコ)
+    };
+
+    _DOUBLE_QUOTE_: _DOUBLE_QUOTE_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(N2)>; // ”
+    };
+
+    _AND_: _AND_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(N6)>; // ＆
+    };
+
+    _SINGLE_QUOTE_: _SINGLE_QUOTE_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(N7)>; // ’
+    };
+
+    _L_PAREN_: _L_PAREN_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(N8)>; // （ (開きカッコ)
+    };
+
+    _R_PAREN_: _R_PAREN_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(N9)>; // ） (閉じカッコ)
+    };
+
+    _EQUAL_: _EQUAL_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(MINUS)>; // ＝
+    };
+
+    _TILDE_: _TILDE_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(EQUAL)>; // ～
+    };
+
+    _PIPE_: _PIPE_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(INT3)>; // ｜
+    };
+
+    _SEMICOLON_: _SEMICOLON_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp SEMI>; // ；
+    };
+
+    _PLUS_: _PLUS_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(SEMI)>; // ＋
+    };
+
+    _ASTERISK_: _ASTERISK_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(LBKT)>; // ＊
+    };
+
+    _UNDER_LINE_: _UNDER_LINE_ {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LS(INT1)>; // ＿
+    };
+};
 
 / {
     combos {
@@ -137,15 +157,18 @@
         };
     };
 
+    macros {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q      &kp W     &kp E     &kp R        &kp T      &kp Y     &kp U        &kp I      &kp O      &kp P
-&kp A      &kp S     &kp D     &kp F        &kp G      &kp H     &kp J        &kp K      &kp L      &kp SEMI
-&kp Z      &kp X     &kp C     &kp V        &kp B      &kp N     &kp M        &kp COMMA  &kp DOT    &kp APOS
-&kp LSHFT  &kp LALT  &kp LCMD  &lt 2 SPACE  &kp LCTRL  &kp BSPC  &lt 1 ENTER  &kp RSHFT  &kp RSHFT  &mt LALT SLASH
+&kp Q      &kp W     &kp E     &kp R        &kp T      &kp Y       &kp U        &kp I      &kp O      &kp P
+&kp A      &kp S     &kp D     &kp F        &kp G      &kp H       &kp J        &kp K      &kp L      &kp SEMI
+&kp Z      &kp X     &kp C     &kp V        &kp B      &_ZENKAKU_  &_YEN_       &kp COMMA  &kp DOT    &kp APOS
+&kp LSHFT  &kp LALT  &kp LCMD  &lt 2 SPACE  &kp LCTRL  &kp BSPC    &lt 1 ENTER  &kp RSHFT  &kp RSHFT  &mt LALT SLASH
             >;
         };
 

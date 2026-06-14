@@ -8,6 +8,9 @@
     /* ==========================================================================
        JIS（日本語配列）記号用マクロ定義
        ========================================================================== */
+   /* ==========================================================================
+       JIS（日本語配列）記号用マクロ定義（完全検証版）
+       ========================================================================== */
     macros {
         _ZENKAKU_: _ZENKAKU_ {
             compatible = "zmk,behavior-macro";
@@ -18,13 +21,13 @@
         _YEN_: _YEN_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INT3>; // ￥
+            bindings = <&kp INTERNATIONAL_3>; // ￥ (JIS円マーク)
         };
 
         _RO_: _RO_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INT1>; // ろ ( \ )
+            bindings = <&kp INTERNATIONAL_1>; // ろ ( \ )
         };
 
         _AT_: _AT_ {
@@ -102,7 +105,7 @@
         _PIPE_: _PIPE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(INT3)>; // ｜
+            bindings = <&kp LS(INTERNATIONAL_3)>; // ｜
         };
 
         _SEMICOLON_: _SEMICOLON_ {
@@ -126,24 +129,19 @@
         _UNDER_LINE_: _UNDER_LINE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(INT1)>; // ＿
-        };
-    };
-
-    /* ==========================================================================
-       コンボ設定
-       ========================================================================== */
-    combos {
-        compatible = "zmk,combos";
-
-        LClick {
-            bindings = <&mkp LCLK>;
-            key-positions = <17 18>;
+            bindings = <&kp LS(INTERNATIONAL_1)>; // ＿
         };
 
-        RClick {
-            bindings = <&mkp RCLK>;
-            key-positions = <7 8>;
+        _MUHENKAN_: _MUHENKAN_ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INTERNATIONAL_5>; // 無変換
+        };
+
+        _HENKAN_: _HENKAN_ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INTERNATIONAL_4>; // 変換
         };
     };
 

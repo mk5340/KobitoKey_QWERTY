@@ -6,106 +6,28 @@
 
 / {
     macros {
-        _ZENKAKU_: _ZENKAKU_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE>;
-        };
-        _YEN_: _YEN_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSLASH>;
-        };
-        _RO_: _RO_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSLASH>;
-        };
-        _AT_: _AT_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT>;
-        };
-        _HAT_: _HAT_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>;
-        };
-        _COLON_: _COLON_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT>;
-        };
-        _L_BRACKET_: _L_BRACKET_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RBKT>;
-        };
-        _R_BRACKET_: _R_BRACKET_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp NONUS_HASH>;
-        };
-        _DOUBLE_QUOTE_: _DOUBLE_QUOTE_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp N2>;
-        };
-        _AND_: _AND_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp N6>;
-        };
-        _SINGLE_QUOTE_: _SINGLE_QUOTE_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp N7>;
-        };
-        _L_PAREN_: _L_PAREN_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp N8>;
-        };
-        _R_PAREN_: _R_PAREN_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp N9>;
-        };
-        _EQUAL_: _EQUAL_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp MINUS>;
-        };
-        _TILDE_: _TILDE_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp EQUAL>;
-        };
-        _PIPE_: _PIPE_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp BACKSLASH>;
-        };
-        _SEMICOLON_: _SEMICOLON_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SEMI>;
-        };
-        _PLUS_: _PLUS_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp SEMI>;
-        };
-        _ASTERISK_: _ASTERISK_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp LBKT>;
-        };
-        _UNDER_LINE_: _UNDER_LINE_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp BACKSLASH>;
-        };
+        _ZENKAKU_: _ZENKAKU_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp GRAVE>; };
+        _YEN_: _YEN_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp BACKSLASH>; };
+        _RO_: _RO_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp BACKSLASH>; };
+        _AT_: _AT_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LBKT>; };
+        _HAT_: _HAT_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp EQUAL>; };
+        _COLON_: _COLON_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp SQT>; };
+        _L_BRACKET_: _L_BRACKET_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp RBKT>; };
+        _R_BRACKET_: _R_BRACKET_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp NONUS_HASH>; };
+        
+        // 修正：括弧を一つに統合しました
+        _DOUBLE_QUOTE_: _DOUBLE_QUOTE_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LSHFT &kp N2>; };
+        _AND_: _AND_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LSHFT &kp N6>; };
+        _SINGLE_QUOTE_: _SINGLE_QUOTE_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LSHFT &kp N7>; };
+        _L_PAREN_: _L_PAREN_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LSHFT &kp N8>; };
+        _R_PAREN_: _R_PAREN_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LSHFT &kp N9>; };
+        _EQUAL_: _EQUAL_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LSHFT &kp MINUS>; };
+        _TILDE_: _TILDE_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LSHFT &kp EQUAL>; };
+        _PIPE_: _PIPE_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LSHFT &kp BACKSLASH>; };
+        _SEMICOLON_: _SEMICOLON_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp SEMI>; };
+        _PLUS_: _PLUS_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LSHFT &kp SEMI>; };
+        _ASTERISK_: _ASTERISK_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LSHFT &kp LBKT>; };
+        _UNDER_LINE_: _UNDER_LINE_ { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LSHFT &kp BACKSLASH>; };
     };
 
     combos {

@@ -4,6 +4,30 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// ★★★ ここから下に貼り付けます ★★★
+/* JIS（日本語配列）直感版キー定義 */
+#define _ZENKAKU_ GRAVE          // 半角/全角
+#define _YEN_     INT3           // ￥
+#define _RO_      INT1           // ろ
+#define _AT_      LBKT           // ＠
+#define _HAT_     EQUAL          // ＾
+#define _COLON_   SQT            // ：
+#define _L_BRACKET_ RBKT         // ［
+#define _R_BRACKET_ NONUS_HASH   // ］
+#define _DOUBLE_QUOTE_ LS(N2)    // ”
+#define _AND_          LS(N6)    // ＆
+#define _SINGLE_QUOTE_ LS(N7)    // ’
+#define _L_PAREN_      LS(N8)    // （
+#define _R_PAREN_      LS(N9)    // ）
+#define _EQUAL_        LS(MINUS) // ＝
+#define _TILDE_        LS(EQUAL) // ～
+#define _PIPE_         LS(INT3)  // ｜
+#define _SEMICOLON_    SEMI      // ；
+#define _PLUS_         LS(SEMI)  // ＋
+#define _ASTERISK_     LS(LBKT)  // ＊
+#define _UNDER_LINE_   LS(INT1)  // ＿
+// ★★★ ここまで ★★★
+
 / {
     combos {
         compatible = "zmk,combos";

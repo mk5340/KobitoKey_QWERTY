@@ -11,132 +11,107 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE>;
         };
-
         _YEN_: _YEN_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp BACKSLASH>;
         };
-
         _RO_: _RO_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp BACKSLASH>;
         };
-
         _AT_: _AT_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LBKT>;
         };
-
         _HAT_: _HAT_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>;
         };
-
         _COLON_: _COLON_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SQT>;
         };
-
         _L_BRACKET_: _L_BRACKET_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RBKT>;
         };
-
         _R_BRACKET_: _R_BRACKET_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp NONUS_HASH>;
         };
-
         _DOUBLE_QUOTE_: _DOUBLE_QUOTE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N2)>;
+            bindings = <&kp LSHFT>, <&kp N2>;
         };
-
         _AND_: _AND_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N6)>;
+            bindings = <&kp LSHFT>, <&kp N6>;
         };
-
         _SINGLE_QUOTE_: _SINGLE_QUOTE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N7)>;
+            bindings = <&kp LSHFT>, <&kp N7>;
         };
-
         _L_PAREN_: _L_PAREN_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N8)>;
+            bindings = <&kp LSHFT>, <&kp N8>;
         };
-
         _R_PAREN_: _R_PAREN_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N9)>;
+            bindings = <&kp LSHFT>, <&kp N9>;
         };
-
         _EQUAL_: _EQUAL_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(MINUS)>;
+            bindings = <&kp LSHFT>, <&kp MINUS>;
         };
-
         _TILDE_: _TILDE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(EQUAL)>;
+            bindings = <&kp LSHFT>, <&kp EQUAL>;
         };
-
         _PIPE_: _PIPE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(BACKSLASH)>;
+            bindings = <&kp LSHFT>, <&kp BACKSLASH>;
         };
-
         _SEMICOLON_: _SEMICOLON_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SEMI>;
         };
-
         _PLUS_: _PLUS_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(SEMI)>;
+            bindings = <&kp LSHFT>, <&kp SEMI>;
         };
-
         _ASTERISK_: _ASTERISK_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LBKT)>;
+            bindings = <&kp LSHFT>, <&kp LBKT>;
         };
-
         _UNDER_LINE_: _UNDER_LINE_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(BACKSLASH)>;
+            bindings = <&kp LSHFT>, <&kp BACKSLASH>;
         };
     };
 
     combos {
         compatible = "zmk,combos";
-        LClick {
-            bindings = <&mkp LCLK>;
-            key-positions = <17 18>;
-        };
-        RClick {
-            bindings = <&mkp RCLK>;
-            key-positions = <7 8>;
-        };
+        LClick { bindings = <&mkp LCLK>; key-positions = <17 18>; };
+        RClick { bindings = <&mkp RCLK>; key-positions = <7 8>; };
     };
 
     keymap {
@@ -146,7 +121,7 @@
 &kp Q      &kp W      &kp E      &kp R        &kp T      &kp Y       &kp U        &kp I      &kp O      &kp P
 &kp A      &kp S      &kp D      &kp F        &kp G      &kp H       &kp J        &kp K      &kp L      &kp SEMI
 &kp Z      &kp X      &kp C      &kp V        &kp B      &_ZENKAKU_  &_YEN_       &kp COMMA  &kp DOT    &kp APOS
-&kp LSHFT  &kp LALT  &kp LCMD  &lt 2 SPACE  &kp LCTRL  &kp BSPC    &lt 1 ENTER  &kp RSHFT  &kp RSHFT  &mt LALT SLASH
+&kp LSHFT  &kp LALT   &kp LCMD   &lt 2 SPACE  &kp LCTRL  &kp BSPC    &lt 1 ENTER  &kp RSHFT  &kp RSHFT  &mt LALT SLASH
             >;
         };
         layer1 {
@@ -176,21 +151,7 @@
 &kp LSHFT  &trans  &kp LCMD  &kp LALT  &to 0   &trans  &trans    &trans    &to 0     &kp RALT
             >;
         };
-        layer_4 {
-            bindings = <
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            >;
-        };
-        layer_5 {
-            bindings = <
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            >;
-        };
+        layer_4 { bindings = <&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>; };
+        layer_5 { bindings = <&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>; };
     };
 };

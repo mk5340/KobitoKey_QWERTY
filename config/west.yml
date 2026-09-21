@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/hsgw
     - name: caksoylar  # <-- led
       url-base: https://github.com/caksoylar  
+    - name: kot149
+      url-base: https://github.com/kot149
 
   projects:
     # ZMK 本体。公式の app/west.yml を取り込む
@@ -32,6 +34,10 @@ manifest:
     - name: zmk-rgbled-widget  # <-- led
       remote: caksoylar
       revision: v0.3
+    # JIS変換のためのモジュール追加（2026/09/21）
+    - name: zmk-layout-shift
+      remote: kot149
+      revision: v2
       
   self:
     path: config
